@@ -124,6 +124,5 @@ public class ServerThreading extends Thread {
 		e.printStackTrace();
 	}
 
-	
 	}
 }
