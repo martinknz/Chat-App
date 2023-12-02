@@ -45,7 +45,7 @@ public class Transceiver implements Output {
 					writeInGUI("Error: " + msg);
 				}	
 			
-				else if (msgparts[0].equals("Namenliste")) {
+				else if (msgparts[0].equals("Participants")) {
 					ClientGUI.modellingList.clear();
 					String[] namelistarr = msgparts[1].split(":");
 				

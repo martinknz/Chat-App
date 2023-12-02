@@ -22,7 +22,7 @@ public class Server extends Thread {
 	public void run() {
 
 		if (ServerGUI.portNumber.getText().equals(null) || ServerGUI.portNumber.getText().equals("")) {
-			transceiver.writeInGUI("Achtung: Es wurde keine Portnummer angegeben!\n");
+			transceiver.writeInGUI("Attention: No Port was given!\n");
 		}
 		
 		int port = Integer.parseInt(ServerGUI.portNumber.getText());
@@ -33,7 +33,7 @@ public class Server extends Thread {
 		catch (IOException e) {
 			transceiver.writeInGUI(e.toString() + "\n");
 		}
-		transceiver.writeInGUI("Server starts on Port " + port + " at " + format.format(date) + " h!\n");
+		transceiver.writeInGUI("Server starts on Port " + port + " at " + format.format(date) + "h!\n");
 	
 		while (!isInterrupted() == true) {
 			try {

@@ -41,17 +41,16 @@ public class ServerGUI {
 		window.setResizable(false);
 		window.getContentPane().setLayout(null);
 		
-		//Portnummer-Label/-TextField
-		port = new JLabel("Portnummer:");
+		//Port
+		port = new JLabel("Port:");
 		port.setBounds(10, 11, 89, 14);
 		window.getContentPane().add(port);
-		
 		portNumber = new JTextField();
 		portNumber.setBounds(100, 8, 97, 20);
 		window.getContentPane().add(portNumber);
 		portNumber.setColumns(10);
 		
-		//Start-Button
+		//Start Button
 		start = new JButton("Start");
 		start.setBounds(287, 627, 89, 23);
 		window.getContentPane().add(start);
@@ -96,7 +95,7 @@ public class ServerGUI {
 						threadKiller.interrupt();
 					}
 					
-					transceiver.writeInGUI("Server was terminated at " + format.format(zeit) + " h!\n");
+					transceiver.writeInGUI("Server was terminated at " + format.format(zeit) + "h!\n");
 					start.setEnabled(true);
 					stop.setEnabled(false);
 				} 

@@ -124,7 +124,7 @@ public class ClientGUI extends JFrame {
 					disconnectButton.setEnabled(true);
 				}
 				catch (Exception e) {
-					transceiver.writeInGUI("Fehler: " + e);
+					transceiver.writeInGUI("Error: " + e);
 				}
 			}
 		});
